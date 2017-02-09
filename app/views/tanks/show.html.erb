@@ -1,0 +1,22 @@
+<div class="">
+  <h1><%= @tank.name %></h1>
+  Volume : <strong><%= @tank.volume  %></strong>
+  <div class="treatments">
+    <%= link_to("Ajouter un traitement", new_tank_treatment_path(@tank))  %>
+    <% @treatments.each do |treatment| %>
+      <h3><%= treatment.name %></h3>
+      <strong><%= treatment.product %></strong>
+      <p><%= treatment.comment %></p>
+    <% end %>
+  </div>
+  <div class="transfers">
+    <%= link_to("Créer un transfert", new_tank_transfer_path(@tank))  %>
+    <div class="">
+      <ul>
+        <% @transfers.each do |transfer| %>
+          <li><%= transfer.quantity %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
