@@ -8,4 +8,12 @@
       <p><%= treatment.comment %></p>
     <% end %>
   </div>
+  <div class="transfers">
+    <%= link_to("Créer un transfert", new_tank_transfer_path(@tank))  %>
+    <div class="">
+      <% @transfers.each do |transfer| %>
+        <strong><%= transfer.quantity %></strong>
+      <% end %>
+    </div>
+  </div>
 </div>

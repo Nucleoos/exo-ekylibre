@@ -16,6 +16,7 @@ class TanksController < ApplicationController
   def show
     find_tank
     @treatments = @tank.treatments
+    @transfers = @tank.transfers
   end
 
   private

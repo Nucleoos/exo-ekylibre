@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'tanks#index'
   resources :tanks do
     resources :treatments
+    resources :transfers
   end
 end
