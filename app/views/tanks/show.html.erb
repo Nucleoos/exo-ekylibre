@@ -1,3 +1,11 @@
 <div class="">
   <h1><%= @tank.name %></h1>
+  <div class="treatments">
+    <%= link_to("Ajouter un traitement", new_tank_treatment_path(@tank))  %>
+    <% @treatments.each do |treatment| %>
+      <h3><%= treatment.name %></h3>
+      <strong><%= treatment.product %></strong>
+      <p><%= treatment.comment %></p>
+    <% end %>
+  </div>
 </div>

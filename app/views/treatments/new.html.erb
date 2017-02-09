@@ -1,0 +1,6 @@
+<%= simple_form_for(@treatment, url: tank_treatments_path(@tank)) do |f| %>
+  <%= f.input :name  %>
+  <%= f.input :product %>
+  <%= f.input :comment, as: :text %>
+  <%= f.submit %>
+<% end %>
